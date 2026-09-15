@@ -7,7 +7,9 @@
 html {
     scroll-behavior: smooth;
 }
-
+section {
+    scroll-margin-top: 100px;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #0b1120;
@@ -427,6 +429,275 @@ body {
 
     .about-info {
         grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+
+    background: #111827;
+
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 15px 40px rgba(56, 189, 248, 0.1);
+}
+
+.project-number {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color: #1e293b;
+
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    position: relative;
+
+    color: #f8fafc;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.project-card > p {
+    position: relative;
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* TECHNOLOGY TAGS */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 28px;
+}
+
+.project-tech span {
+    background: rgba(56, 189, 248, 0.1);
+
+    color: #38bdf8;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* PROJECT LINKS */
+
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+.project-links a {
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: #ffffff;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-item span {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.contact-item a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: white;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    background: #0b1120;
+    color: white;
+
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+
+    padding: 13px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #38bdf8;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #1e293b;
+    padding: 35px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: #38bdf8;
+}
+
+.footer-container p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* CONTACT + FOOTER MOBILE */
+
+@media (max-width: 750px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 
 }
