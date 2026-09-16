@@ -15,6 +15,7 @@ navItems.forEach((item) => {
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const submitButton = contactForm.querySelector('button[type="submit"]');
 
 contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -23,18 +24,21 @@ contactForm.addEventListener("submit", async (event) => {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    formStatus.textContent = "Sending message...";
+    // Show sending state
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    formStatus.textContent = "Sending your message...";
+    formStatus.className = "sending";
 
     try {
         const response = await fetch(
             "https://my-api-v7q6.onrender.com/api/contact",
             {
                 method: "POST",
-
                 headers: {
                     "Content-Type": "application/json"
                 },
-
                 body: JSON.stringify({
                     name,
                     email,
@@ -54,12 +58,20 @@ contactForm.addEventListener("submit", async (event) => {
         formStatus.textContent =
             "Message sent successfully! Thank you.";
 
+        formStatus.className = "success";
+
         contactForm.reset();
 
     } catch (error) {
-        console.error(error);
+        console.error("Contact form error:", error);
 
         formStatus.textContent =
             "Unable to send your message. Please try again.";
+
+        formStatus.className = "error";
+
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
     }
 });

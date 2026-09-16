@@ -768,3 +768,26 @@ footer {
     color: #38bdf8;
     font-size: 14px;
 }
+
+#formStatus {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#formStatus.sending {
+    color: #38bdf8;
+}
+
+#formStatus.success {
+    color: #22c55e;
+}
+
+#formStatus.error {
+    color: #ef4444;
+}
+
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
