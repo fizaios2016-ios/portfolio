@@ -14,16 +14,22 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-
-            <a href="#" class="logo">
+              <a href="#" class="logo">
                 Fiz<span>.</span>
             </a>
+            <!-- <div class="brand">
+            <img src="images/logo.png" class="company-logo" alt="ZiMiTechs Logo">
+            
+            </div> -->
+            </nav>
+             
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-            <ul class="nav-links">
+          
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -223,73 +229,89 @@
     <div class="projects-grid">
 
         <!-- Project 1 -->
-        <article class="project-card">
+        <div class="project-card">
+    <div class="project-content">
+        <span class="project-label">Featured Project</span>
 
-            <div class="project-number">
-                01
-            </div>
+        <h3>User Management REST API</h3>
 
-            <h3>User Management REST API</h3>
+        <p>
+            A production-ready REST API built with Node.js, Express
+            and MongoDB featuring user authentication, JWT access
+            tokens, refresh tokens, protected routes and secure
+            password handling.
+        </p>
 
-            <p>
-                A full-stack user management system with secure
-                authentication, JWT access and refresh tokens,
-                MongoDB database integration and protected API routes.
-            </p>
+        <div class="project-tech">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>JWT</span>
+            <span>REST API</span>
+        </div>
 
-            <div class="project-tech">
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-                <span>JWT</span>
-            </div>
+        <div class="project-links">
+            <a
+                href="https://github.com/fizaios2016-ios/my-api"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
 
-            <div class="project-links">
-                <a href="#" target="_blank">
-                    GitHub
-                </a>
-
-                <a href="https://my-api-v7q6.onrender.com" target="_blank">
-                    Live Demo
-                </a>
-            </div>
-
-        </article>
+            <a
+                href="https://my-api-v7q6.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Live API
+            </a>
+        </div>
+    </div>
+</div>
 
 
         <!-- Project 2 -->
-        <article class="project-card">
+       <div class="project-card">
+    <div class="project-content">
+        <span class="project-label">Web Project</span>
 
-            <div class="project-number">
-                02
-            </div>
+        <h3>Developer Portfolio Website</h3>
 
-            <h3>Portfolio Website</h3>
+        <p>
+            A responsive developer portfolio built from scratch
+            with HTML, CSS and JavaScript. Features a modern
+            responsive design, mobile navigation and a working
+            contact form connected to a Node.js API and Resend.
+        </p>
 
-            <p>
-                A modern and responsive developer portfolio built
-                from scratch to showcase my skills, projects and
-                software development journey.
-            </p>
+        <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Resend</span>
+        </div>
 
-            <div class="project-tech">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Git</span>
-            </div>
+        <div class="project-links">
+            <a
+                href="https://github.com/fizaios2016-ios/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
 
-            <div class="project-links">
-                <a href="https://github.com/fizaios2016-ios/portfolio" target="_blank">
-                    GitHub
-                </a>
-
-                <a href="https://fizaios2016-ios.github.io/portfolio/" target="_blank">
-                    Live Demo
-                </a>
-            </div>
-
-        </article>
+            <a
+                href="https://fizaios2016-ios.github.io/portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Live Demo
+            </a>
+        </div>
+    </div>
+</div>
 
 
         <!-- Project 3 -->
@@ -299,23 +321,23 @@
                 03
             </div>
 
-            <h3>Coming Soon</h3>
+            <h3>iOS Task Manager</h3>
 
-            <p>
-                I'm continuously building new applications and
-                improving my development skills. My next project
-                will be featured here.
-            </p>
+        <p>
+            A modern iOS task management application for creating,
+            organizing and tracking daily tasks with a clean,
+            user-friendly interface.
+        </p>
 
-            <div class="project-tech">
-                <span>Next Project</span>
-            </div>
+        <div class="project-tech">
+            <span>Swift</span>
+            <span>SwiftUI</span>
+            <span>iOS</span>
+        </div>
 
-            <div class="project-links">
-                <a href="#contact">
-                    Let's Work Together
-                </a>
-            </div>
+        <div class="project-links">
+            <span class="project-status">In Development</span>
+        </div>
 
         </article>
 
@@ -424,7 +446,9 @@
         <a href="#home" class="footer-logo">
             ZiMi-Techs<span>.</span>
         </a>
-
+        
+            <img src="images/logo.png" class="company-logo" alt="ZiMiTechs Logo">
+        
         <p>
             Designed & Built by ZiMi-Techs
         </p>
